@@ -7,6 +7,30 @@ div {
     margin-bottom: 20px;
 }
 
+#navbar {
+    background-color: #333;
+      padding: 15px;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      transition: top 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  #content {
+    padding: 50px 16px;
+  }
+  
+  #navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 0;
+    transition: color 0.3s;
+  }
+
 table {
     width: 100%;
     border-collapse: collapse;
