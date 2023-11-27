@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Producer-Consumer Simulation</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="producer-consumer">
+            <div class="producer">
+                <span>Producer</span>
+                <p>Producer-Consumer...
+                    This algorithm uses a fixed-size buffer or queue, and it ensures that
+                     the producer does not attempt to insert data items into the buffer if 
+                     it is already full, and that the consumer does not attempt to read
+                      data items from the buffer if it is already empty
+                </p>
+            </div>
+            <div class="buffer">
+                <div class="item"></div>
+            </div>
+            <div class="consumer">
+                <span>Consumer</span>
+            </div>
+        </div>
+    </div>
+    <script defer src="producer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intersection {
+    position: relative;
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    background-image: url('intersection.png'); /* Replace 'intersection.png' with the actual image URL */
+    background-size: cover;
+}
+
+.car1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #1316e8; /* Color of car1 */
+    animation: moveCar1 4s linear infinite; /* Animation for car1 */
+    left: 50%; /* Center the car horizontally within the intersection */
+    transform: translateX(-350%); /* Adjust to center the car horizontally */
+}
+
+.car2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #821088; /* Color of the cars */
+    animation: moveCar2 4s linear infinite; /* Animation for car2 */
+    right: 0;
+    bottom: 50%;
+    transform: translate(0, 50%);
+    animation-play-state: paused; /* Initially paused */
+}
+
+.car1 {
+    animation-name: moveCar1;
+    left: 40%;
+    top: 50%;
+    transform: translate(0, -50%);
+    animation-play-state: running; /* Initially running */
+}
+
+.car2 {
+    animation-name: moveCar2;
+    right: 0;
+    bottom: 50%;
+    transform: translate(0, 50%);
+}
+
+.stoplight {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    width: 35px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.light {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: rgb(247, 51, 51);
+}
+
+.amber {
+    background-color: #de7504;
+}
+
+.green {
+    background-color: rgb(11, 176, 11);
+}
+
+@keyframes moveCar1 {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+@keyframes moveCar2 {
+    0% { right: 0; }
+    100% { right: 100%; }
+}
+.floating-text {
+    font-size: 24px;
+    margin-right: 5px; /* Adjust the right margin as needed */
+    animation: floatText 2s ease-in-out infinite;
+    font:  sans-serif;
+    position:fixed;
+    top: 15%;
+    left: 60%;
+    transform: translateX(-50%);
+ 
+  
+    
+}
+
+@keyframes floatText {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0);}
+}

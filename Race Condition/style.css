@@ -1,0 +1,135 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+@keyframes moveStickFigure {
+    0% { transform: translateX(0); }
+    /*50% { transform: translateX(200px) rotate(0deg); }*/
+    100% { transform: translateX(calc(200px + 50%));}
+}
+
+@keyframes moveStickFigureLeft {
+    0% { transform: translateX(0); }
+    /*50% { transform: translateX(200px) rotate(0deg); }*/
+    100% {  transform: translateX(calc(-200px + 50%)); }
+}
+
+
+@keyframes moveStickFigureRight {
+0% { transform: translate(330%, -100%); /* Move to the top-right corner */}
+100% {transform: translateX(calc(20% - 100px)) translateY(calc(50% - 100px)); /* Move to the center next to the Sofa */
+}
+}
+@keyframes moveStickFigureFromTopRightToCenter {
+    0% {transform: translate(330%, 0%); }/* Start from the right-hand side */
+    100% {transform: translateX(calc(50% - 125px));} /* Move to the center */
+    
+}
+@keyframes moveSofaToTop{
+    0% {left: calc(70% - 100px);} /* Start from the current position */
+    
+    100% {left: calc(30% - 9px);} /* Move to the left */
+    
+}
+
+@keyframes moveSofaUp{
+    0%{top:calc(50% - 100px); }/* Start from the current position */
+    100%{top:calc(30% - 100px); }/* Moves Sofa Up */
+}
+
+@keyframes turnSofa{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(90deg);}
+}
+
+@keyframes moveSofaRight{
+    0% {left: calc(80% - 50px);} /*Start from current position*/
+    100% {left: calc(60% - 9px); }/* Move to the right */
+    
+}
+
+@keyframes moveSofaDown{
+    0%{top:calc(40% - 100px); }/* Start from current position */
+    100%{top:calc(60% - 100px); }/* Moves sofa down */
+}
+
+@keyframes moveDownAndRight {
+    0% {
+        transform: translateY(0) rotate(0deg); /* Start from the center with no rotation */
+    }
+    50% {
+        transform: translateY(20%) rotate(0deg); /* Move down */
+    }
+    75% {
+        transform: translateY(20%) rotate(0deg); /* Maintain position */
+    }
+    100% {
+        transform: translateY(80%) rotate(90deg) translateX(20%); /* Move to the right and rotate 90 degrees */
+    }
+}
+
+@keyframes fadeOutStickFigure {
+    0% {
+        opacity: 1; /* Start with full opacity */
+    }
+    100% {
+        opacity: 0; /* Fade out to completely transparent */
+    }
+}
+
+.stick-figure1 {
+    position: relative;
+    animation: moveStickFigureFromTopRightToCenter 5s forwards,fadeOutStickFigure 1s forwards 4s; /* Adjust the animation duration and iteration as needed */
+    width: 250px;
+    height: 300px;
+    top: calc(20% - 100px);  /* Center  vertically */
+}
+.stick-figure2 {
+    position: relative;
+    animation: moveStickFigureRight 10s forwards; /* Adjust the animation duration and iteration as needed */
+    width: 250px;
+    height: 300px;
+}
+.Sofa{
+   
+    height: 150px;
+    width: 300px;
+    position:absolute;
+    left: calc(80% - 50px); /* Center the Sofa horizontally */
+    top: calc(50% - 100px);  /* Center the Sofa vertically */
+    animation: moveSofaToTop 4s forwards,moveSofaUp 4s forwards,moveDownAndRight 8s forwards ;
+    
+   
+}
+
+
+
+.layout{
+    height: 500px;
+    width: 850px;
+    position:absolute;
+}
+
+.dotted-box {
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    top: calc(40% - 100px);
+    left: calc(50% - 100px); 
+    border: 5px dotted black;
+}
+
+#RaceConditionInfo{
+font:  sans-serif;
+font-size: 40px;
+position:fixed;
+top: 5%;
+left: 50%;
+transform: translateX(-50%);
+color: darkgreen;
+}
