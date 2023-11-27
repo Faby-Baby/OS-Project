@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+form label {
+    margin-right: 15px;
+}
+
+input[type="text"], input[type="button"] {
+    padding: 8px;
+    margin: 5px;
+}
+
+/* Style the label for better alignment */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Add a transition effect */
+}
+
+/* Style the checked state of radio buttons */
+input[type="radio"]:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #e74c3c; /* Change the color for the checked state */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 0.3s ease-in-out forwards; /* Add the fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+#quantumParagraph {
+    margin-top: 10px;
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#resultTable {
+    animation: fadeInFromLeft 1s ease-in-out;
+}
+
+/* Style for the add and delete buttons */
+#minus {
+    margin-left: 5px;
+    display: none; /* Initially hidden */
+}
+
+/* Style for the Go button */
+input[type="button"][value="Go"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="button"][value="Go"]:hover {
+    background-color: #45a049;
+}
